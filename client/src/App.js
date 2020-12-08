@@ -1,19 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Axios from "axios";
 import NavMenu from "./components/NavMenu";
 import welcome from "./pictures/welcomeontarottrans.png";
 import logo from "./pictures/tarotlogotrans.png";
-import images from "./Pictures.js";
 
 function App() {
-  const [cards, setCards] = useState([]);
-
-  useEffect(() => {
-    Axios.get("http://localhost:3001/cards").then((res) => {
-      setCards(res.data);
-    });
-  }, []);
 
   return (
     <div>
@@ -32,12 +23,6 @@ function App() {
             </div>
           </div>
         </div>
-        <img src="./cards/chariot.jpg" />
-        {/* {cards.map((v) => {
-          var pic = v.name;
-          var imagePath = require(pic);
-          return <img src={imagePath} alt={v.name} />;
-        })} */}
         <p className="buttons">
           <button type="button" className="front-page-button">
             What is tarot?
@@ -55,11 +40,3 @@ function App() {
 }
 
 export default App;
-
-/* {cards.map((value) => {
-  return (
-    <p>
-      {value.name} | {value.upward} | {value.downward}
-    </p>
-  );
-})} */
