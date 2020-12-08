@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router";
 import "./App.css";
 import NavMenu from "./components/NavMenu";
 import welcome from "./pictures/welcomeontarottrans.png";
 import logo from "./pictures/tarotlogotrans.png";
-
-import cardPicDic from "./components/GenerateCard.js";
 
 function App() {
   return (
@@ -25,15 +24,15 @@ function App() {
           </div>
         </div>
         <p className="buttons">
-          <button type="button" className="front-page-button">
+          <Link to={"/description"} className="front-page-button">
             What is tarot?
-          </button>
-          <button type="button" className="front-page-button">
+          </Link>
+          <Link to={"/cards"} className="front-page-button">
             See all cards
-          </button>
-          <button type="button" className="front-page-button">
+          </Link>
+          <Link to={"/generator"} className="front-page-button">
             Pick a card
-          </button>
+          </Link>
         </p>
       </div>
     </div>
