@@ -19,10 +19,19 @@ function App() {
       <NavMenu />
       <div className="main">
         <img src={welcome} className="welcome" />
-        <p>
-          <img src={logo} className="logo" />
-        </p>
-        <p>
+        <div className="animation">
+          <div class="flip-container">
+            <div class="flipper">
+              <div class="front">
+                <img src={logo} className="logo" />
+              </div>
+              <div class="back">
+                <img src={logo} className="logo" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <p className="buttons">
           <button type="button" className="front-page-button">
             What is tarot?
           </button>
