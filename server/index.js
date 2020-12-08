@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require('cors');
 const mysql = require("mysql");
 const { values } = require("./values.js");
 
@@ -10,22 +11,27 @@ var db = mysql.createConnection({
   database: "tatatarotdb",
 });
 
+app.use(cors());
+
 db.connect(function (err) {
   if (err) throw err;
-  console.log(values);
   console.log("Successful connection");
-  const sqlInsert = "INSERT INTO cards (name, upward, downward) VALUES ?";
 
-  db.query(sqlInsert, [values], (err, result) => {
-    if (err) throw err;
-    console.log("Number of records inserted: " + result.affectedRows);
-  });
+  //ONLY ONCE WHEN YOUR DATABASE IS EMPTY, RUN THE COMMENTED PART
+
+  // const sqlInsert = "INSERT INTO cards (name, upward, downward) VALUES ?";
+
+  // db.query(sqlInsert, [values], (err, result) => {
+  //   if (err) throw err;
+  //   console.log("Number of records inserted: " + result.affectedRows);
+  // });
+  
 });
 
 app.get("/cards", (req, res) => {
   const sqlSelect = "SELECT * FROM cards";
   db.query(sqlSelect, (err, result) => {
-    console.log(result);
+    res.send(result);
   });
 });
 
