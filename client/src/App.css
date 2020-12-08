@@ -1,3 +1,43 @@
-.App {
+.main {
   text-align: center;
+  align-items: center;
+  display: block;
+}
+
+.welcome {
+  width: 100%;
+  margin-top: 20px;
+  max-width: 850px;
+  height: auto;
+}
+
+.logo {
+  width: 100%;
+  margin-top: 20px;
+  max-width: 180px;
+  height: auto;
+}
+
+button:active {
+  outline: none;
+}
+
+.front-page-button {
+  border-color: purple;
+  border-width: thick;
+  color: white;
+  cursor:pointer;
+  background-color: grey;
+  font-size: x-large;
+  opacity: 0.5;
+  font-weight: bold;
+  -webkit-text-stroke: 2px rgb(41, 1, 41);
+  margin-left: 10px;
+}
+
+.front-page-button:hover {
+  font-size: xx-large;
+  border-color: rgb(53, 1, 53);
+  color: white;
+  
 }
