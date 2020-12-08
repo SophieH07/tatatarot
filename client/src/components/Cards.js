@@ -1,6 +1,6 @@
 import React from "react";
 import Axios from "axios";
-import { cardPicDic } from "./GenerateCardPic.js";
+import { cardPicDic } from "./GenerateCard.js";
 
 function Cards() {
   const [cards, setCards] = useState([]);
