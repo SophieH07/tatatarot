@@ -14,16 +14,19 @@ db.connect(function (err) {
   if (err) throw err;
   console.log(values);
   console.log("Successful connection");
-  var sql = "INSERT INTO cards (name, upward, downward) VALUES ?";
+  const sqlInsert = "INSERT INTO cards (name, upward, downward) VALUES ?";
 
-  db.query(sql, [values], (err, result) => {
+  db.query(sqlInsert, [values], (err, result) => {
     if (err) throw err;
     console.log("Number of records inserted: " + result.affectedRows);
   });
 });
 
-app.get("/", (req, res) => {
-  res.send("Hello world");
+app.get("/cards", (req, res) => {
+  const sqlSelect = "SELECT * FROM cards";
+  db.query(sqlSelect, (err, result) => {
+    console.log(result);
+  });
 });
 
 app.listen("3001", () => {
