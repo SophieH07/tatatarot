@@ -1,38 +1,28 @@
-import React from 'react';
+import React from "react";
 import Axios from "axios";
-
-//PICTURES
-import chariot from "../cards/chariot.jpg";
-import death from "../cards/death.jpg";
-import emperor from "../cards/emperor.jpg";
-import empress from "../cards/empress.jpg";
-import fool from "../cards/fool.jpg";
-import hermit from "../cards/hermit.jpg";
-import hierophant from "../cards/hierophant.webp";
-import highpriestess from "../cards/high-priestess.jpg";
-import judgement from "../cards/chariot.jpg";
+import { cardPicDic } from "./GenerateCardPic.js";
 
 function Cards() {
+  const [cards, setCards] = useState([]);
 
-    const cardPicList = [
-        
-    ]
+  useEffect(() => {
+    Axios.get("http://localhost:3001/cards").then((res) => {
+      setCards(res.data);
+    });
+  }, []);
 
-    const [cards, setCards] = useState([]);
-    
-    useEffect(() => {
-      Axios.get("http://localhost:3001/cards").then((res) => {
-        setCards(res.data);
-      });
-    }, []);
-
-    return (
-        <div>
-            <img src={cardPics} />
-        </div>
-    )
+  return (
+    <div>
+      <div className="cards">
+        {cardPicDic.map((card, index) => (
+          <div key={index}>
+            <img src={card.pic} alt={pic.name} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
-
 
 export default Cards;
 

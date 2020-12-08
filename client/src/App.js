@@ -4,12 +4,20 @@ import NavMenu from "./components/NavMenu";
 import welcome from "./pictures/welcomeontarottrans.png";
 import logo from "./pictures/tarotlogotrans.png";
 
-function App() {
+import { cardPicDic } from "./GenerateCardPic.js";
 
+function App() {
   return (
     <div>
       <NavMenu />
       <div className="main">
+        <div className="cards">
+          {cardPicDic.map((card, index) => (
+            <div key={index}>
+              <img src={card.pic} alt={pic.name} />
+            </div>
+          ))}
+        </div>
         <img src={welcome} className="welcome" alt="" />
         <div className="animation">
           <div className="flip-container">
