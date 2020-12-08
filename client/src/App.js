@@ -4,6 +4,7 @@ import Axios from "axios";
 import NavMenu from "./components/NavMenu";
 import welcome from "./pictures/welcomeontarottrans.png";
 import logo from "./pictures/tarotlogotrans.png";
+import images from "./Pictures.js";
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -18,19 +19,25 @@ function App() {
     <div>
       <NavMenu />
       <div className="main">
-        <img src={welcome} className="welcome" />
+        <img src={welcome} className="welcome" alt="" />
         <div className="animation">
-          <div class="flip-container">
-            <div class="flipper">
-              <div class="front">
-                <img src={logo} className="logo" />
+          <div className="flip-container">
+            <div className="flipper">
+              <div className="front">
+                <img src={logo} className="logo" alt="" />
               </div>
-              <div class="back">
-                <img src={logo} className="logo" />
+              <div className="back">
+                <img src={logo} className="logo" alt="" />
               </div>
             </div>
           </div>
         </div>
+        <img src="./cards/chariot.jpg" />
+        {/* {cards.map((v) => {
+          var pic = v.name;
+          var imagePath = require(pic);
+          return <img src={imagePath} alt={v.name} />;
+        })} */}
         <p className="buttons">
           <button type="button" className="front-page-button">
             What is tarot?
@@ -49,12 +56,10 @@ function App() {
 
 export default App;
 
-{
-  /* {cards.map((value) => {
+/* {cards.map((value) => {
   return (
     <p>
       {value.name} | {value.upward} | {value.downward}
     </p>
   );
 })} */
-}

@@ -20,11 +20,15 @@ db.connect(function (err) {
   //ONLY ONCE WHEN YOUR DATABASE IS EMPTY, RUN THE COMMENTED PART
 
   // const sqlInsert = "INSERT INTO cards (name, upward, downward) VALUES ?";
-
+    // const sqlDelete = "DELETE FROM cards"
   // db.query(sqlInsert, [values], (err, result) => {
   //   if (err) throw err;
   //   console.log("Number of records inserted: " + result.affectedRows);
   // });
+    // db.query(sqlDelete, (err, res) => {
+    //   if (err) throw err;
+    //   console.log('delete table');
+    // })
   
 });
 
