@@ -1,4 +1,3 @@
-import "./App.css";
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavMenu from "./components/NavMenu";
@@ -8,8 +7,6 @@ import { Generator } from "./components/Generator";
 import { Description } from "./components/Description";
 
 export default class App extends Component {
-  static displayName = App.name;
-
   render() {
     return (
       <Router>

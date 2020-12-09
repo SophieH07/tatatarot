@@ -27,8 +27,6 @@
 }
 
 .front-page-button {
-  border-color: purple;
-  border-width: thick;
   color: white;
   cursor:pointer;
   background-color: grey;
@@ -43,6 +41,9 @@
   font-size: xx-large;
   border-color: rgb(53, 1, 53);
   color: white;
+  text-decoration: none;
+  border-color: purple;
+  border-width: thick;
 }
 
 .animation {

@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import "../App.css";
+import "./Home.css";
 import welcome from "../pictures/welcomeontarottrans.png";
 import logo from "../pictures/tarotlogotrans.png";
 import { Link } from "react-router-dom";
-import "../App";
 
 export class Home extends Component {
   render() {
