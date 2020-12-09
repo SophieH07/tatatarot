@@ -1,19 +1,20 @@
-import React from "react";
-import { cardPicDic } from "./GenerateCard.js";
+import React, { Component } from "react";
+import cardPicDic from "./GenerateCard.js";
 
-function Cards() {
-
-  return (
-    <div>
-      <div className="cards">
-        {cardPicDic.map((card, index) => (
-          <div key={index}>
-            <img src={card.pic} alt={pic.name} />
-          </div>
-        ))}
+export class Cards extends Component {
+  render() {
+    return (
+      <div>
+        <div className="cards">
+          {cardPicDic.map((card, index) => (
+            <div key={index}>
+              <p>{card.name}</p>
+              {/* <img src={card.pic} alt={pic.name} /> */}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
-export default Cards;

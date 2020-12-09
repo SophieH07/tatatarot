@@ -1,42 +1,26 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router";
 import "./App.css";
+import React, { Component } from "react";
+import { Route, Router, Switch } from "react-router";
 import NavMenu from "./components/NavMenu";
-import welcome from "./pictures/welcomeontarottrans.png";
-import logo from "./pictures/tarotlogotrans.png";
+import { Home } from "./components/Home";
+import { Cards } from "./components/Cards";
+import { Generator } from "./components/Generator";
+import { Description } from "./components/Description";
 
-function App() {
-  return (
-    <div>
-      <NavMenu />
-      <div className="main">
-        <img src={welcome} className="welcome" alt="" />
-        <div className="animation">
-          <div className="flip-container">
-            <div className="flipper">
-              <div className="front">
-                <img src={logo} className="logo" alt="" />
-              </div>
-              <div className="back">
-                <img src={logo} className="logo" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <p className="buttons">
-          <Link to={"/description"} className="front-page-button">
-            What is tarot?
-          </Link>
-          <Link to={"/cards"} className="front-page-button">
-            See all cards
-          </Link>
-          <Link to={"/generator"} className="front-page-button">
-            Pick a card
-          </Link>
-        </p>
-      </div>
-    </div>
-  );
+export default class App extends Component {
+  static displayName = App.name;
+
+  render() {
+    return (
+      <Router>
+        <header>
+          <NavMenu />
+        </header>
+        <Route exact path="/" component={Home} />
+        <Route path="/cards" component={Cards} />
+        <Route path="/description" component={Description} />
+        <Route path="/generator" component={Generator} />
+      </Router>
+    );
+  }
 }
-
-export default App;

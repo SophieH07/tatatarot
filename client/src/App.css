@@ -22,7 +22,7 @@
   height: auto;
 }
 
-button:active {
+.front-page-button:active {
   outline: none;
 }
 

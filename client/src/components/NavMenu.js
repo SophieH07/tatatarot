@@ -1,32 +1,46 @@
-import React, { useState } from "react";
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from "reactstrap";
+import React, { Component } from "react";
+import {Collapse,Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,NavLink} from "reactstrap";
 
+export default class NavMenu extends Component {
+  static displayName = NavMenu.name;
 
-function NavMenu() {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
+  constructor(props) {
+    super(props);
 
-  return (
-      <Navbar color="dark" dark expand="md" sticky="top">
-        <NavbarBrand href="/">TATATAROT</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
+    this.toggleNavbar = this.toggleNavbar.bind(this);
+    this.state = {
+      collapsed: true,
+    };
+  }
+
+  toggleNavbar() {
+    this.setState({
+      collapsed: !this.state.collapsed,
+    });
+  }
+
+  render() {
+    return (
+        <Navbar color="dark" dark expand="md" sticky="top">
+          <NavbarBrand href="/">TATATAROT</NavbarBrand>
+          <NavbarToggler onClick={this.toggleNavbar} />
+          <Collapse isOpen={!this.state.collapsed} navbar>
+            <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/description">
-                What is TAROT?
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/cards">See Cards</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/generator">Pick your fortune</NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
-  );
+                <NavLink href="/">Home</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/description">What is TAROT?</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/cards">See Cards</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/generator">Pick your fortune</NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+    );
+  }
 }
-
-export default NavMenu;
