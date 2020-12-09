@@ -8,8 +8,7 @@ export class Cards extends Component {
         <div className="cards">
           {cardPicDic.map((card, index) => (
             <div key={index}>
-              <p>{card.name}</p>
-              {/* <img src={card.pic} alt={pic.name} /> */}
+              <img src={card.pic} alt={card.name} />
             </div>
           ))}
         </div>

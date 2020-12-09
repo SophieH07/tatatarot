@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import "../App.css";
 import welcome from "../pictures/welcomeontarottrans.png";
 import logo from "../pictures/tarotlogotrans.png";
+import { Link } from "react-router-dom";
+import "../App";
 
 export class Home extends Component {
-  static displayName = Home.name;
-
   render() {
     return (
       <div className="main">
@@ -22,11 +22,17 @@ export class Home extends Component {
             </div>
           </div>
         </div>
-        <p className="buttons">
-          <button className="front-page-button">What is tarot?</button>
-          <button className="front-page-button">See all cards</button>
-          <button className="front-page-button">Pick a card</button>
-        </p>
+        <div className="buttons">
+            <Link to="/description" className="front-page-button">
+              What is tarot?
+            </Link>
+            <Link to="/cards" className="front-page-button">
+              See all cards
+            </Link>
+            <Link to="/generator" className="front-page-button">
+              Pick a card
+            </Link>
+        </div>
       </div>
     );
   }
