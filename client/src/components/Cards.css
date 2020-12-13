@@ -1,0 +1,22 @@
+.cards {
+    margin-top: 10px;
+    display: inline;
+    align-items: center;
+    text-align: center;
+}
+
+.card-pic {
+    max-width: 200px;
+    margin-left: 10px;
+    border-radius: 10px;
+    height: auto;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.card-pic:hover {
+    max-width: 230px;
+    height: auto;
+    width: 100%;
+    cursor: pointer;
+}
