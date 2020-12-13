@@ -5,9 +5,9 @@ import emperor from "../cards/emperor.jpg";
 import empress from "../cards/empress.jpg";
 import fool from "../cards/fool.jpg";
 import hermit from "../cards/hermit.jpg";
-import hierophant from "../cards/hierophant.webp";
-import highpriestess from "../cards/high-priestess.jpg";
-import judgement from "../cards/chariot.jpg";
+// import hierophant from "../cards/hierophant.webp";
+// import highpriestess from "../cards/high-priestess.jpg";
+// import judgement from "../cards/chariot.jpg";
 
 
 const cardPicDic = [

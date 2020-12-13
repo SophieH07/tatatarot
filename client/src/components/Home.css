@@ -22,11 +22,13 @@
   height: auto;
 }
 
-.front-page-button:active {
+.front-page-button:focus {
   outline: none;
 }
 
 .front-page-button {
+  border-width: thick;
+  border-color: purple;
   color: white;
   cursor:pointer;
   background-color: grey;
@@ -42,7 +44,6 @@
   border-color: rgb(53, 1, 53);
   color: white;
   text-decoration: none;
-  border-color: purple;
   border-width: thick;
 }
 
