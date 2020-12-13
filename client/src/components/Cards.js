@@ -7,12 +7,11 @@ export class Cards extends Component {
     return (
       <div>
         <div className="cards">
-          {cardPicDic.map((card, index) => (
-              <img className="card-pic" src={card.pic} alt={card.name} />
-              ))}
+          {cardPicDic.map((card, i) => (
+            <img className="card-pic" src={card.pic} alt={card.name}/>
+          ))}
         </div>
       </div>
     );
   }
 }
-

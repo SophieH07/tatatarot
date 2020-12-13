@@ -1,6 +1,6 @@
 .cards {
     margin-top: 10px;
-    display: inline;
+    display: flow-root;
     align-items: center;
     text-align: center;
 }
