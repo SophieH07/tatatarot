@@ -8,6 +8,21 @@ import hermit from "../cards/hermit.jpg";
 import hierophant from "../cards/hierophant.webp";
 import highpriestess from "../cards/high-priestess.jpg";
 import judgement from "../cards/chariot.jpg";
+import justice from "../cards/justice.webp";
+import lovers from "../cards/lovers.jpg";
+import magician from "../cards/magician.jpg";
+import moon from "../cards/moon.jpg";
+import star from "../cards/star.jpg";
+import strength from "../cards/strength.jpg";
+import sun from "../cards/sun.jpg";
+import temperance from "../cards/temperance.jpg";
+import devil from "../cards/the-Devil.jpg";
+import hangedman from "../cards/the-hanged-man.webp";
+import tower from "../cards/tower.jpg";
+import wheeloffortune from "../cards/wheel-of-fortune.jpg";
+import world from "../cards/world.jpg";
+
+
 
 const cardPicDic = [
   {
