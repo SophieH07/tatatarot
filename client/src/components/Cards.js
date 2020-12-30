@@ -9,7 +9,10 @@ export class Cards extends Component {
       <div>
         <div className="cards">
           {cardPicDic.map((card, i) => (
-            <Link to="/card">
+            <Link to={{
+              pathname: `/card/${card.name}`,
+              state: card
+              }}>
               <img className="card-pic" src={card.pic} alt={card.name} />
             </Link>
           ))}

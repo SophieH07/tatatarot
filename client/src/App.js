@@ -18,7 +18,7 @@ export default class App extends Component {
         <Route path="/cards" component={Cards} />
         <Route path="/description" component={Description} />
         <Route path="/generator" component={Generator} />
-        <Route path="/card" component={Card} />
+        <Route path="/card/:name" component={Card} />
       </Router>
     );
   }
