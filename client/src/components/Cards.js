@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import cardPicDic from "./CardsList.js";
+import cardPicDic from "./CardsDictionary.js";
 import "./Cards.css";
 import { Link } from "react-router-dom";
 

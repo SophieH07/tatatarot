@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Generator.css";
-import cardPicDic from "./CardsList.js";
+import cardPicDic from "./CardsDictionary.js";
 import backPic from "../pictures/backpage.png";
 
 export class Generator extends Component {
