@@ -6,7 +6,8 @@ It was created in React.js.
 How to start?
 
 It's enough to open in Visual Studio Code, if you have it. In the terminal go into the client folder<br>
-cd client<br>
+If you follow this approach, you should delete the package-lock.json since the npm install will regenerate it but can mess up with the versions therefor the application so be careful!<br>
+type: cd client<br>
 <br>
 type: npm install<br>
 If there are any trouble, because it is an old version, you should follow the instructions for "npm audit fix" or "npm audit fix --force".<br>
