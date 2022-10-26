@@ -25,7 +25,7 @@ export class Generator extends Component {
       <div className="random-card">
         <div>
           <button className="button" onClick={this.generateRandomCard}>
-            PICK
+            SEE YOUR TAROT
           </button>
         </div>
         {this.state.showMe ? (
