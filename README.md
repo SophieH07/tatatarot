@@ -5,10 +5,10 @@ It was created in React.js.
 
 How to start?
 
-It's enough to open in Visual Studio Code, if you have it. In the terminal go into the client folder
-cd client
-
-type: npm install
-If there are any trouble, because it is an old version, you should follow the instructions for "npm audit fix" or "npm audit fix --force".
-
+It's enough to open in Visual Studio Code, if you have it. In the terminal go into the client folder<br>
+cd client<br>
+<br>
+type: npm install<br>
+If there are any trouble, because it is an old version, you should follow the instructions for "npm audit fix" or "npm audit fix --force".<br>
+<br>
 After that just type (still in the client directory) npm start. It should run fine. Enjoy :)
