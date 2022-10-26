@@ -58,7 +58,7 @@ export class Generator extends Component {
             )}
           </div>
         ) : (
-          <img className="picture" src={backPic} alt="" />
+          <img className="picture" src={backPic} alt="" onClick={this.generateRandomCard} style={{cursor:"pointer"}} />
         )}
       </div>
     );
