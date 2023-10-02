@@ -16,7 +16,7 @@ It should run fine. Enjoy :)
 <br>
 Here is a sneak peek what it looks like:
 <br>
-<img src="/client/public/tarot_frontpage.png">
-<img src="/client/public/all_cards.png">
-<img src="/client/public/card_detail.png">
-<img src="/client/public/choose_card.png">
+<img src="/client/public/tarot_frontpage.png" width="100">
+<img src="/client/public/all_cards.png" width="100">
+<img src="/client/public/card_detail.png" width="100">
+<img src="/client/public/choose_card.png" width="100">
